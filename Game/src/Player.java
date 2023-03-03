@@ -3,6 +3,8 @@ public class Player {
     int yCoordinaate;
     char symbol;
     Direction direction; // 3nda tunni teema
+    // Ese: xCoordinaate, yCoordinate, tugevusest, kasutuskordadest, nimest
+
 
     // constructor
     public Player(int worldWidth, int worldHeight) {

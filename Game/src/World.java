@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class World {
     int width;
     int height;
@@ -7,7 +9,10 @@ public class World {
         this.height = height;
     }
 
-    public void printMap(int worldWidth, int worldHeight, int playerXCoordinaate, int playerYCoordinaate, char playerSymbol, int dragonXCoordinaate, int dragonYCoordinaate, char dragonSymbol, int orcXCoordinaate, int orcYCoordinaate, char orcSymbol) {
+    public void printMap(int worldWidth, int worldHeight,
+                         int playerXCoordinaate, int playerYCoordinaate, char playerSymbol,
+                         int dragonXCoordinaate, int dragonYCoordinaate, char dragonSymbol,
+                         int orcXCoordinaate, int orcYCoordinaate, char orcSymbol, List<Item> items) {
         // algväärtus   kuni   iga tsükkel
         for (int y = 0; y < worldHeight; y++) {
             System.out.println();
@@ -22,6 +27,11 @@ public class World {
                     printCharacters(playerXCoordinaate, playerYCoordinaate, playerSymbol,
                             dragonXCoordinaate, dragonYCoordinaate, dragonSymbol,
                             orcXCoordinaate, orcYCoordinaate, orcSymbol, y, x);
+                    for (Item i: items) {
+                        if (i.yCoordinate == y && i.xCoordinate == x) {        // aktiveerin + parem klõps + refactor + rename
+                            System.out.print("I");
+                        }
+                    }
                 }
             }
         }

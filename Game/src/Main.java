@@ -1,5 +1,5 @@
-import java.util.Random;
-import java.util.Scanner;
+
+import java.util.*;
 
 public class Main {
 
@@ -28,10 +28,23 @@ public class Main {
         Dragon dragon = new Dragon(world.width, world.height);
         Orc orc = new Orc(world.width, world.height);
 
+        Item sword = new Item(10,1,"Mõõk", world.width, world.height);
+        Item hammer = new Item(5,3,"Haamer", world.width, world.height);
+        Item boot = new Item(1,10,"Saabas", world.width, world.height);
+
+        // import! java.util.List
+        // import: java.util.ArrayList
+        //                              import: java.util.Arrays
+        // List --> muudetav
+        List<Item> items = new ArrayList<>(Arrays.asList(sword, hammer, boot));
+
+//        Item[] items1 = {sword, hammer, boot};
+        // Array -> ei ole muudetav (read-only)
+
         world.printMap(world.width, world.height,
                 player.xCoordinaate, player.yCoordinaate, player.symbol,
                 dragon.xCoordinaate, dragon.yCoordinaate, dragon.symbol,
-                orc.xCoordinaate, orc.yCoordinaate, orc.symbol);
+                orc.xCoordinaate, orc.yCoordinaate, orc.symbol, items);
         String input = scanner.nextLine();
 //        for (; !input.equals("end"); )
         while (!input.equals("end")) {
@@ -39,7 +52,7 @@ public class Main {
             world.printMap(world.width, world.height,
                     player.xCoordinaate, player.yCoordinaate, player.symbol,
                     dragon.xCoordinaate, dragon.yCoordinaate, dragon.symbol,
-                    orc.xCoordinaate, orc.yCoordinaate, orc.symbol);
+                    orc.xCoordinaate, orc.yCoordinaate, orc.symbol, items);
             System.out.println();
             input = scanner.nextLine();
         }
