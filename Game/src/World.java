@@ -13,26 +13,31 @@ public class World {
                          int playerXCoordinaate, int playerYCoordinaate, char playerSymbol,
                          int dragonXCoordinaate, int dragonYCoordinaate, char dragonSymbol,
                          int orcXCoordinaate, int orcYCoordinaate, char orcSymbol, List<Item> items) {
-        // algväärtus   kuni   iga tsükkel
+        char symbol = ' '; // luuakse uus muutuja (deklareerimine), esmakordne väärtuse andmine on initsialiseerimine
         for (int y = 0; y < worldHeight; y++) {
             System.out.println();
             for (int x = 0; x < worldWidth; x++) {
                 if (y == 0 || y == worldHeight -1) {
-                    System.out.print("-");
+                    symbol = '-';
                 } else if (x == 0 || x == worldWidth -1) {
-                    System.out.print("|");
+                    symbol = '|';
                 } else {
-//                    ctrl + alt + m
-//                    parem klõps -> refactor -> extract method
-                    printCharacters(playerXCoordinaate, playerYCoordinaate, playerSymbol,
-                            dragonXCoordinaate, dragonYCoordinaate, dragonSymbol,
-                            orcXCoordinaate, orcYCoordinaate, orcSymbol, y, x);
                     for (Item i: items) {
                         if (i.yCoordinate == y && i.xCoordinate == x) {        // aktiveerin + parem klõps + refactor + rename
-                            System.out.print("I");
+                            symbol = 'I';
+                            break;
                         }
                     }
+                    if (playerXCoordinaate == x && playerYCoordinaate == y) {        // aktiveerin + parem klõps + refactor + rename
+                        symbol = playerSymbol;
+                    } else if (dragonXCoordinaate == x && dragonYCoordinaate == y) {
+                        symbol = dragonSymbol;
+                    } else if (orcXCoordinaate == x && orcYCoordinaate == y) {
+                        symbol = orcSymbol;
+                    }
                 }
+                System.out.print(symbol);
+                symbol = ' ';
             }
         }
     }
@@ -45,18 +50,5 @@ public class World {
 
     // void on tagastustüüp ehk mis tüüp järgneb return kirjele
     // void tähendab, et ei tagastatagi midagi
-    private void printCharacters(int playerXCoordinaate, int playerYCoordinaate, char playerSymbol,
-                                        int dragonXCoordinaate, int dragonYCoordinaate, char dragonSymbol,
-                                        int orcXCoordinaate, int orcYCoordinaate, char orcSymbol, int mapY, int mapX) {
-        if (playerXCoordinaate == mapX && playerYCoordinaate == mapY) {        // aktiveerin + parem klõps + refactor + rename
-            System.out.print(playerSymbol);
-        } else if (dragonXCoordinaate == mapX && dragonYCoordinaate == mapY) {
-            System.out.print(dragonSymbol);
-        } else if (orcXCoordinaate == mapX && orcYCoordinaate == mapY) {
-            System.out.print(orcSymbol);
-        } else {
-            System.out.print(" ");
-        }
-    }
 
 }

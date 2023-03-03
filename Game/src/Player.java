@@ -4,7 +4,7 @@ public class Player {
     char symbol;
     Direction direction; // 3nda tunni teema
     // Ese: xCoordinaate, yCoordinate, tugevusest, kasutuskordadest, nimest
-
+    Item item; // klassikomplekt   Player klassi sees on Item klass
 
     // constructor
     public Player(int worldWidth, int worldHeight) {

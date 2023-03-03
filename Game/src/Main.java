@@ -54,6 +54,13 @@ public class Main {
                     dragon.xCoordinaate, dragon.yCoordinaate, dragon.symbol,
                     orc.xCoordinaate, orc.yCoordinaate, orc.symbol, items);
             System.out.println();
+            for (Item i : items) {
+                if (i.xCoordinate == player.xCoordinaate && i.yCoordinate == player.yCoordinaate) {
+                    player.item = i;
+                    System.out.println("Korjasid eseme: " + player.item.name);
+                    break;
+                }
+            }
             input = scanner.nextLine();
         }
     }
