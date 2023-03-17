@@ -1,0 +1,83 @@
+Harmooniline keskmine
+
+* Koosta funktsioon, mille sisendiks on kahe kilomeetripikkuse lõigu läbimise kiirused (km/h), väljundiks nende kahe kilomeetri läbimise keskmine kiirus.
+* Funktsioonile antakse ette kilomeetripikkuste lõikude läbimiste keskmised kiirused kogumina (km/h). Väljasta kogu selle tee läbimise keskmine kiirus.
+* Kilomeetriste lõikude läbimiste keskmised kiirused loetakse sisse failist, kogu teekonna läbimise keskmine kiirus salvestatakse faili.
+
+
+Šifreerija/dešifreerija (cipher, decipher)
+
+* Luua klass, mis muudaks ette antava lause tähestiku ulatuses mingisuguse nihkega arusaamatuks (näiteks nihe 1, kus kõik “a”-d muudetakse “b”-deks, “d”-d muudetakse “e”-deks jne)
+* Samuti eksisteeriks ka dešifreerija, et võimalik nihke ette andmisel funktsiooni selle sama sisendi tagasi muutma arusaadavaks
+* Lugeda failist esimesel real oleva nihke numbri ning ülejäänud read selle nihke abil šifreerida ning salvestada šifreeritud kujul teise faili.
+
+
+Jõed joonisel
+
+* Loo klass jõe andmete hoidmiseks (nimetus, lähtme ja suudme koordinaadid joonisel). Koosta funktsioon lähtme ja suudme vahelise kauguse leidmiseks pikslites ning automaattest selle töö kontrolliks.
+* Lisa jõele muutuja sihtjõgi koos suhtega, millisesse sihtjõe kohta ta suubub (0 - lähe, 0.5 - keskkoht, 1-suue). Jõele luuakse vahepunktide hoidla, iga lisajõe lisamisel tuleb tema suudme koordinaat punktide loetellu sobivasse kohta. Lisa automaattest vahepunktide arvu kontrolliks.
+* Võimalda objektidena mälus olev jõgede komplekt salvestada tekstifaili ning lugeda sealt. Eraldi konfifaili sisestatakse võimalikku reostust sisaldavad jõed. 
+
+
+Salat
+
+* Koosta klass toiduaine tarbeks (nimetus, valkude, rasvade ja süsivesikute protsent). Protsent kokku ei saa ületada 100 - muidu antakse veateade. Loo mõni toiduaine (nt. kartul, hapukoor, vorst). Koosta klass toidukomponendi tarbeks (kogus, viit toiduainele). Loo mõned toidukomponendid (nt. 100 g kartuleid, 30 g hapukoort, 50 g vorsti). Lisa toidukomponendile käsklus selle sees leiduva rasvakoguse arvutamiseks. 
+* Koosta uus klass, kus on toiduainete listid ning kus saab toiduaineid objektide kaudu lisada ja kustutada, nime järgi andmeid vaadata ning rasvaprotsendivahemiku järgi otsida. Koosta lisamise, arvutamise, otsimise ja kustutamise kontrollimiseks automaattest.
+* Koosta klass toidu jaoks (nimetus, toidukomponendid). Toidule käsklused küsimaks sisalduvate valkude, rasvade ja süsivesikute kogust. Loo retsepti järgi toit (nt. kartulisalat), küsi salatis leiduvate toitainete kogused. Koosta klass, kus näidatakse valitud toidu etteantud koguse (nt. 5 kg kartulisalati) jaoks vajalikud toiduained. Kontrolli automaattestiga arvutuste õigsust. 
+
+
+Akordide arvutaja
+
+* Loo klass Kolmkõla mazoorkolmkõla nootide arvutamiseks. Konstruktoris antakse sisse täisarvuline põhitoon, eraldi käsuga väljastatakse põhitoon, suur terts (+4) ja kvint (+7). Ehk siis kui põhitooniks on 60 (C), siis väljastatakse arvud 60 64 67. Loo toimimise kontrolliks automaattest.
+* Loo klassile alamklassid CKolmkõla (põhitoon 60), FKolmkõla(65), GKolmkõla(67). Koosta klass, kuhu parameetrina antakse ette taktide akorditähed, kolmkõlaklasside abil väljastatakse mängitavad noodid. Lisa toimimise kontrolliks automaattest. 
+* Kolmkõla klassil on lisaks käsklus arvuliste MIDI-noodinumbrite tähtnimetusteks muutmiseks ning vastupidi. Alates 60st: C C# D Eb E F F# G G# A B H C Lisa  Kolmkõlale ka konstruktor, kus antakse ette akordi tähtnimetus ning selle järgi leitakse akordi põhitoon arvuna. Samuti on võimalik akordi noodid trükkida tähtnimedega. Koosta klass Lugu, kuhu iga takti jaoks saab lisada kolmkõla eksemplari. Klassist parameetrina antud kolmkõlatähtede põhjal väljastatakse Loo klassi eksemplari kaudu vastavalt kasutaja valikule kas mängitavad noodinumbrid või -nimed. Kontrolli automaattestidega.
+
+
+Joone võrrand
+
+* Koosta liides joone y-i väärtuse leidmiseks vastavalt x-i väärtusele. Koosta automaattestid kontrollimaks mitut punkti sirgel y=3x. Koosta realiseeriv klass, millele antakse konstruktoris ette x-i kordaja. Kontrolli klassi eksemplari oskuste vastavust testidele.
+* Loo teine realiseeriv klass, millele saab ette anda kordaja ja vabaliikme. Kontrolli selle klassi tööd liidese kaudu testidega joontele y=3x ning y=3x+2. Koosta funktsioon, mis saab parameetriks x-ide massiivi ning liidesele vastava y-koordinaate arvutava klassi ning tagastab vastavate y-ite massiivi. Kontrolli klasside ja funktsiooni tööd automaattestidega.
+* Sisend loetakse failist, kuhu sisestatakse a, b ja x-i vähim ja suurim väärtus. Tulemuste arvutamiseks kasutatakse eelnevalt loodud ja testitud funktsiooni, realiseeriv klass valitakse vastavalt b väärtusele - nulli puhul esimene lihtsam variant. Koosta faili lugeva rakenduse väljundi kontrolliks automaattest.
+
+ 
+Ioonid ja ained
+
+* Loo liides iooni andmete tarbeks - nimetus, aatommasside summa, laeng. Loo realiseeriv klass, kus nimetus on stringina. Koosta paar näidet - H+, NO3-. Koosta automaattest iooni loomise ning andmete küsimise kohta.
+* Loo liides aine jaoks. Aine kohta saab küsida nimetuse ja molekulmassi.  Koosta realiseeriv klass kahe iooni kokkupanekul tekkiva aine jaoks. Konstruktoris kontrollitakse, et ioonide laengud oleksid võrdsed ja vastasmärgilised. Nimetuses kuvatakse positiivse iooni nimetus eespool. Koosta automaattestid ainete loomise ja molekulmassi arvutamise kohta. Lubatud on näiteks NaCl ja CaO, aga mitte CaCl (sest kaltsium on 2+ ning kloor 1-)
+* Loo aine liidest realiseeriv uus klass, kuhu eraldi antakse sisse ioonide massiiv. Aine luuakse vaid juhul, kui laengute summa on 0. Nimetuses kuvatakse iooni kordumine vastava numbriga. Nt [Ca2+, Cl-, Cl-] loetakse sobivaks ning kuvatakse CaCl2. Koosta rakendus, kus failis olevasse loetellu saab lisada ioone. Kui loetelus olevatest ioonidest saab moodustada aine, siis kuvatakse see vastava klassi abiga ning näidatakse ka aine molekulmass. 
+
+
+Geenid
+
+* Loo klass alleeli tarbeks. Nimetus (nt reesus) ning tõeväärtus, kas vastav alleel on positiivne. Loo klass geeni tarbeks, mis koosneb kahest sama nimetusega alleelist. Geeni puhul väljastatakse positiivne väärtus juhul, kui vähemalt ühe seal oleva samanimelise alleeli väärtus on positiivne. Koosta kontrollimiseks automaattestid.
+* Lisa geenile käsklus juhusliku alleeli väljastamiseks. Koosta funktsioon kahe geeni ühinemisel tekkivast uuest geenist, kus kummastki algsest geenist võeti juhuslik alleel. Koosta klass, kuhu sisestatakse alleeli nimetus ning kummagi vanema alleelide +/- väärtused. Väljastatakse lapsel tekkinud geen ning salvestatakse see faili.
+* Kasutaja saab otsida geeni nimetuse järgi. Kasutaja saab valida, millised kuvatud geeniga inimesed omavahel järglase saavad ning järglasel tekkinud vastav geen talletatakse samuti faili. 
+
+
+Tähed
+
+* Loo liides, mille ainus meetod saab sisendiks tähe ning väljastab selle tähe esinemise arvu. Loo realiseeriv klass sõna tarbeks. Koosta automaattestid töö kontrolliks näitamaks a, p ja e-tähtede arvu sõnas pere.
+* Loo liidest realiseeriv klass Lause. Lauselt saab lisaks küsida sõnade arvu ning Sõna-klassi eksemplaride massiivi. Koosta rakendus, kus saab ette anda lause ning väljastatakse a-tähtede arv terves lauses ning igas sõnas eraldi. Koosta automaattest lause a-tähtede arvu kontrolli õigsuse kohta.
+* Kõik lausetes leidunud eri sõnad lisatakse faili. Rakenduse väljundis näidatakse, millised sõnad on sisendlausest uued ning millised juba varem olemas olnud. 
+
+
+Mitmerealine maanteeliiklus
+
+* (Failist loetavaks) sisendiks on 10-kilomeetrise maanteelõigu sõidukite kaugused ühest maanteelõigu otspunktist ja kiirused (miinusmärk tähistab vastassuunda). Väljasta kohad, kus sõidukid satuvad kokku (nii päri- kui vastassuunas).
+* Lisaks eelmistele märgi, milliste kokkusaamiste juures pole võimalik teha piisava pikkusvaruga (suurus paku ise) möödasõitu.
+* Kuni möödasõitu pole võimalik teha, senikaua püsib sõiduk eelmise taga. Väljasta autode asukohad sekundi tagant. 
+
+
+Sõnade lõputähed
+
+Salvesta uurimiseks vähemalt paarileheküljeline tekst.
+* Trüki välja sõnade viimased tähed
+* Väljasta erinevad sõnalõputähed nende esinemissageduse järjekorras
+* Iga lõputähega sõnade jaoks on eraldi fail, kuhu need tekstist kirjutatakse. Luuakse uus fail viidetega tekstis esinenud lõputähtedega failidele, iga viite juures arv, mitu korda vastava lõputähega sõna esines.
+
+Sõnapikkuste uuring
+
+Salvesta uurimiseks vähemalt paarileheküljeline tekst.
+* Koosta programm, mis loeks kokku, mitu kolmetähelist sõna on tekstis.
+* Koosta graafik (või soovi korral väljaprinditav tabel, mis katab järgneva loogika), kus ühel teljel on teksti algusest sinnamaani esinenud kolmetäheliste sõnade arv ning teisel teljel selleks ajaks leitud kolmetäheliste erinevate sõnade arv.
+* Võta uuringuks tunduvalt pikem tekst. Kuva joonisele (või soovi korral tabelisse) sarnased graafikud 1-10 tähe pikkuste sõnade kohta. Mummukestega tähista joonistele kohad, kus on läbitud veerand, pool ja kolmveerand tekstist.

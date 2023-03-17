@@ -12,6 +12,13 @@ public class Main {
         // List<Double> sisend = new ArrayList(Arrays.asList(3,4,5,6,6)); // List, ArrayList, Arrays
         // Arrays tuleb importida
         System.out.println(Arrays.toString(libisevKeskmine(sisend)));
+
+        LibisevKeskmine libisev = new LibisevKeskmine(2,3,4);
+        libisev.lisaArv(4);
+        System.out.println(libisev.arvudKeskmisega);
+        libisev.lisaArv(5);
+        libisev.lisaArv(5);
+        System.out.println(libisev.arvudKeskmisega);
     }
 
     private static double aritmKeskmine(double arv1, double arv2, double arv3) {
