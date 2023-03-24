@@ -1,23 +1,10 @@
-public class Player {
-    int xCoordinaate; // täisarvuline number
-    int yCoordinaate;
-    char symbol;
-    Direction direction; // 3nda tunni teema
-    // Ese: xCoordinaate, yCoordinate, tugevusest, kasutuskordadest, nimest
-    Item item; // klassikomplekt   Player klassi sees on Item klass
+public class Player extends Character {
+    Direction direction;
+    Item item;
 
-    // constructor
     public Player(int worldWidth, int worldHeight) {
-        this.xCoordinaate = getRandomCoordinaate(worldWidth);
-        this.yCoordinaate = getRandomCoordinaate(worldHeight);
-        this.symbol = 'X';
+        super(worldWidth, worldHeight, 'X');
         this.direction = Direction.UP;
-    }
-
-    private static int getRandomCoordinaate(int worldDimension) {
-        // castimine ehk teisendamine ühest tüübist teise
-        return (int) (Math.random() * (worldDimension - 2) + 1);
-        // returni järel tuleb täisarv
     }
 
     // public tähendab, et mõni teine klass saab ka seda funktsiooni välja kutsuda

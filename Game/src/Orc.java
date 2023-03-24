@@ -1,15 +1,11 @@
-public class Orc {
-    int xCoordinaate;
-    int yCoordinaate;
-    char symbol;
+                // ALAMKLASS
+public class Orc extends Character {
+
 
     public Orc(int worldWidth, int worldHeight) {
-        this.xCoordinaate = getRandomCoordinaate(worldWidth);
-        this.yCoordinaate = getRandomCoordinaate(worldHeight);
-        this.symbol = 'O';
+        // super on parenti constructor
+        super(worldWidth, worldHeight, 'O');
     }
 
-    private static int getRandomCoordinaate(int worldDimension) {
-        return (int) (Math.random() * (worldDimension - 2) + 1);
-    }
+
 }

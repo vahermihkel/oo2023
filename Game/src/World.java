@@ -35,6 +35,11 @@ public class World {
                     } else if (orcXCoordinaate == x && orcYCoordinaate == y) {
                         symbol = orcSymbol;
                     }
+//                    for (Character c: characters) {
+//                        if (c.xCoordinaate == x && c.yCoordinaate == y) {
+//                            symbol = c.symbol;
+//                        }
+//                    }
                 }
                 System.out.print(symbol);
                 symbol = ' ';
