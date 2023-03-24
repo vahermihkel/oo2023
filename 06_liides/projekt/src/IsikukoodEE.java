@@ -17,12 +17,24 @@ public class IsikukoodEE extends Isikukood implements Andmed {
 
     @Override
     public String getKuupaev() {
-        return null;
-    }
+        if (isikukood.startsWith("3") || isikukood.startsWith("4")) {
+            return  isikukood.substring(5,7) + "." + isikukood.substring(3,5) + ".19" + isikukood.substring(1,3);
+        } else if (isikukood.startsWith("5") || isikukood.startsWith("6")) {
+            return isikukood.substring(5,7) + "." + isikukood.substring(3,5) + ".20" + isikukood.substring(1,3);
+        } else {
+            return "Vigane isikukood!";
+        }
+    } // 312412321
 
     @Override
     public int getVanus() {
-        return 0;
+        if (isikukood.startsWith("3") || isikukood.startsWith("4")) {
+            return 2023 - (1900 + Integer.parseInt(isikukood.substring(1,3)));
+        } else if (isikukood.startsWith("5") || isikukood.startsWith("6")) {
+            return 2023 - (2000 + Integer.parseInt(isikukood.substring(1,3)));
+        } else {
+            return -1;
+        }
     }
 }
 

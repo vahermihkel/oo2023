@@ -6,12 +6,22 @@ public class IsikukoodFI extends Isikukood implements Andmed {
 
     @Override
     public String getSugu() {
-        return null;
+        if (Integer.parseInt(isikukood.substring(9,10)) % 2 != 0) {
+            return "M";
+        } else {
+            return "F";
+        }
     }
 
     @Override
     public String getKuupaev() {
-        return null;
+        if (isikukood.charAt(6) == '-') {
+            return  isikukood.substring(4,6) + "." + isikukood.substring(2,4) + ".19" + isikukood.substring(0,2);
+        } else if (isikukood.charAt(6) == 'A') {
+            return isikukood.substring(4,6) + "." + isikukood.substring(2,4) + ".20" + isikukood.substring(0,2);
+        } else {
+            return "Vigane isikukood!";
+        }
     }
 
     @Override
@@ -19,8 +29,6 @@ public class IsikukoodFI extends Isikukood implements Andmed {
         return 0;
     }
 }
-
-
 //    https://cran.r-project.org/web/packages/hetu/vignettes/hetu.html
 //    hetu	sex	p.num	ctrl.char	date	day	month	year	century	valid.pin
 //    111111-111C	Male	111	C	1911-11-11	11	11	1911	-	TRUE
