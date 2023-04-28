@@ -1,5 +1,7 @@
 package ee.mihkel.veebipood;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +13,9 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Isik {
+    @Id
     private int id;
     private String eesnimi;
     private String perenimi;
