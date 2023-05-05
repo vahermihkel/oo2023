@@ -1,5 +1,6 @@
 package ee.mihkel.veebipood;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,8 +12,13 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class Tellimus {
+    @Id
     private int id;
-    private Isik tellija;
+    @ManyToOne
+    private Isik tellija; // Isik    KontaktAndmed
+
+    @ManyToMany
     private List<Toode> tooted;
 }
